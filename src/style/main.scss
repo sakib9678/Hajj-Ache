@@ -1,0 +1,44 @@
+.container {
+    max-width: 1350px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+.title::before {
+    position: absolute;
+    top: 40%;
+    left: 9px;
+    content: '';
+    background: white;
+    height: 1px;
+    width: 2rem;
+}
+.title::after {
+    position: absolute;
+    top: 65%;
+    left: 0px;
+    content: '';
+    background: white;
+    height: 1px;
+    width: 2rem;
+}
+.title-others::before {
+    position: absolute;
+    top: 40%;
+    left: 9px;
+    content: '';
+    background: #0471BA;
+    height: 1px;
+    width: 2rem;
+}
+.title-others::after {
+    position: absolute;
+    top: 65%;
+    left: 0px;
+    content: '';
+    background: #0471BA;
+    height: 1px;
+    width: 2rem;
+}
+.service-shadow{
+    box-shadow: 0px 19px 68px 0px rgba(0, 0, 0, 0.05);
+}

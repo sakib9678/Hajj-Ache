@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { FaHotel, FaBus, FaUtensils, FaUserTie, FaMosque } from "react-icons/fa";
+import {
+  FaHotel,
+  FaBus,
+  FaUtensils,
+  FaUserTie,
+  FaMosque,
+} from "react-icons/fa";
 
 const Packege = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -244,18 +250,14 @@ const Packege = () => {
       className={`relative rounded-2xl overflow-hidden transition-all duration-300 hover:shadow-xl ${
         pkg.isPopular
           ? "border-2 border-emerald-500"
-          : darkMode
-          ? "border border-gray-700"
-          : "border border-gray-200"
+          : "border border-gray-200 dark:border-gray-700"
       }`}
     >
       <div
         className={`p-6 ${
           pkg.isPopular
             ? "bg-gradient-to-br from-emerald-500 to-emerald-700"
-            : darkMode
-            ? "bg-gray-800"
-            : "bg-white"
+            : "bg-white dark:bg-gray-800"
         }`}
       >
         {pkg.isPopular && (
@@ -269,7 +271,9 @@ const Packege = () => {
         <div className="text-center mb-8">
           <h3
             className={`text-2xl font-bold mb-2 ${
-              pkg.isPopular ? "text-white" : darkMode ? "text-white" : "text-gray-900"
+              pkg.isPopular
+                ? "text-white"
+                : "text-gray-900 dark:text-white"
             }`}
           >
             {pkg.title}
@@ -285,7 +289,7 @@ const Packege = () => {
           </div>
           <p
             className={`text-sm mt-2 ${
-              pkg.isPopular ? "text-emerald-100" : "text-gray-500"
+              pkg.isPopular ? "text-emerald-100" : "text-gray-500 dark:text-gray-400"
             }`}
           >
             বা মাসিক ৳{pkg.perMonth}
@@ -305,14 +309,16 @@ const Packege = () => {
               <div>
                 <p
                   className={`font-medium ${
-                    pkg.isPopular ? "text-white" : darkMode ? "text-white" : "text-gray-900"
+                    pkg.isPopular
+                      ? "text-white"
+                      : "text-gray-900 dark:text-white"
                   }`}
                 >
                   {feature.type}
                 </p>
                 <p
                   className={`text-sm ${
-                    pkg.isPopular ? "text-emerald-100" : "text-gray-500"
+                    pkg.isPopular ? "text-emerald-100" : "text-gray-500 dark:text-gray-400"
                   }`}
                 >
                   {feature.details}
@@ -336,20 +342,18 @@ const Packege = () => {
   );
 
   return (
-    <div className={darkMode ? "bg-gray-900" : "bg-gray-50"}>
+    <div className="dark:bg-gray-900 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2
-            className={`text-4xl font-bold mb-4 ${
-              darkMode ? "text-white" : "text-emerald-600"
-            }`}
+            className="text-5xl font-bold mb-4 text-emerald-60
+              dark:text-white 0"
           >
             আমাদের প্যাকেজসমূহ
           </h2>
           <p
-            className={`text-xl max-w-3xl mx-auto mb-8 ${
-              darkMode ? "text-gray-300" : "text-gray-600"
-            }`}
+            className="text-xl max-w-3xl mx-auto mb-8 
+              dark:text-gray-300 text-gray-600"
           >
             আপনার বাজেট এবং প্রয়োজন অনুযায়ী সেরা প্যাকেজটি বেছে নিন
           </p>
@@ -357,11 +361,9 @@ const Packege = () => {
           <div className="flex justify-center space-x-4 mb-12">
             <button
               onClick={() => setActiveTab("umrah")}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-2 text-lg rounded-full font-medium transition-all duration-300 ${
                 activeTab === "umrah"
                   ? "bg-emerald-600 text-white"
-                  : darkMode
-                  ? "bg-gray-800 text-white"
                   : "bg-gray-200 text-gray-700"
               }`}
             >
@@ -369,11 +371,9 @@ const Packege = () => {
             </button>
             <button
               onClick={() => setActiveTab("hajj")}
-              className={`px-6 py-2 rounded-full font-medium transition-all duration-300 ${
+              className={`px-6 py-2 text-lg rounded-full font-medium transition-all duration-300 ${
                 activeTab === "hajj"
                   ? "bg-emerald-600 text-white"
-                  : darkMode
-                  ? "bg-gray-800 text-white"
                   : "bg-gray-200 text-gray-700"
               }`}
             >
@@ -393,16 +393,10 @@ const Packege = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className={`text-lg mb-6 ${darkMode ? "text-gray-300" : "text-gray-600"}`}>
+          <p className="text-lg mb-6  text-gray-600 dark:text-gray-300">
             কাস্টমাইজড প্যাকেজের জন্য যোগাযোগ করুন
           </p>
-          <button
-            className={`px-8 py-3 rounded-xl font-medium transition-all duration-300 ${
-              darkMode
-                ? "bg-emerald-600 text-white hover:bg-emerald-700"
-                : "border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50"
-            }`}
-          >
+          <button className="px-8 py-3 rounded-xl font-medium transition-all duration-300 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:bg-emerald-600 dark:text-white dark:hover:bg-emerald-700">
             কাস্টম প্যাকেজের জন্য যোগাযোগ করুন →
           </button>
         </div>

@@ -3,6 +3,8 @@ import {
   FaBriefcaseMedical,
   FaBus,
   FaCertificate,
+  FaCheckCircle,
+  FaChevronDown,
   FaChevronRight,
   FaEnvelope,
   FaHeadset,
@@ -266,27 +268,27 @@ const Services = () => {
                 <h3 className="font-bold text-xl mb-3">কি অন্তর্ভুক্ত:</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <i className="fas fa-check-circle text-emerald-600 mt-1 mr-2"></i>
+                    <FaCheckCircle className="text-emerald-600 mt-1 mr-2" />
                     <span>
                       বিলাসবহুল এয়ার-কন্ডিশনড যানবাহন পেশাদার চালকদের সাথে
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <i className="fas fa-check-circle text-emerald-600 mt-1 mr-2"></i>
+                    <FaCheckCircle className="text-emerald-600 mt-1 mr-2" />
                     <span>
                       ব্যস্ত সময়ে পবিত্র স্থানগুলিতে অগ্রাধিকারমূলক প্রবেশপথ
                     </span>
                   </li>
                   <li className="flex items-start">
-                    <i className="fas fa-check-circle text-emerald-600 mt-1 mr-2"></i>
+                    <FaCheckCircle className="text-emerald-600 mt-1 mr-2" />
                     <span>আপনার ভ্রমণপথের জন্য নমনীয় সময়সূচী</span>
                   </li>
                   <li className="flex items-start">
-                    <i className="fas fa-check-circle text-emerald-600 mt-1 mr-2"></i>
+                    <FaCheckCircle className="text-emerald-600 mt-1 mr-2" />
                     <span>বিনামূল্যে পানীয় এবং ওয়াই-ফাই</span>
                   </li>
                   <li className="flex items-start">
-                    <i className="fas fa-check-circle text-emerald-600 mt-1 mr-2"></i>
+                    <FaCheckCircle className="text-emerald-600 mt-1 mr-2" />
                     <span>
                       তাৎক্ষণিক সহায়তার জন্য 24/7 নিবেদিতপ্রাণ প্রেরণকারী
                     </span>
@@ -312,7 +314,7 @@ const Services = () => {
       </section>
 
       {/* Service Benefits */}
-      <section className={`py-16 ${darkMode ? "bg-gray-800" : "bg-white"}`}>
+      <section className="py-16 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">
@@ -343,15 +345,13 @@ const Services = () => {
       {/* Service Inquiry Form */}
       <section
         id="inquiry-form"
-        className={`py-16 ${darkMode ? "bg-gray-800" : "bg-white"}`}
+        className="py-16 bg-white dark:bg-gray-800"
       >
         <div className="container mx-auto px-6">
-          <div className="max-w-5xl mx-auto ">
+          <div className=" mx-auto ">
             <div className="flex flex-col lg:flex-row rounded-xl overflow-hidden">
               <div
-                className={`lg:w-2/5 p-10 ${
-                  darkMode ? "bg-gray-700" : "bg-emerald-600 text-white"
-                }`}
+                className="lg:w-2/5 p-10 bg-emerald-600 text-white dark:bg-gray-700"
               >
                 <h2 className="text-3xl font-bold mb-6 text-white">
                   যোগাযোগ করুন
@@ -375,7 +375,8 @@ const Services = () => {
                   </div>
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mr-4">
-                      <i className="fas fa-phone-alt text-white"></i><FaPhoneAlt className="text-white" />
+                      <i className="fas fa-phone-alt text-white"></i>
+                      <FaPhoneAlt className="text-white" />
                     </div>
                     <div>
                       <h4 className="font-bold text-white">ফোন নম্বর</h4>
@@ -387,8 +388,8 @@ const Services = () => {
                   </div>
                   <div className="flex items-start">
                     <div className="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center flex-shrink-0 mr-4">
-                      <i className="fas fa-envelope text-white"></i><FaEnvelope className="text-white" />
-
+                      <i className="fas fa-envelope text-white"></i>
+                      <FaEnvelope className="text-white" />
                     </div>
                     <div>
                       <h4 className="font-bold text-white">ইমেইল ঠিকানা</h4>
@@ -403,13 +404,15 @@ const Services = () => {
                   darkMode ? "bg-gray-700" : "bg-white"
                 }`}
               >
-                <h3 className="text-2xl font-bold mb-6">পরিষেবা তদন্ত ফর্ম</h3>
+                <h3 className="text-2xl font-bold mb-6 text-[#059669]">পরিষেবা তদন্ত ফর্ম</h3>
                 <form>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label
                         htmlFor="name"
-                        className="block text-sm font-medium mb-2"
+                        className={`block text-sm font-medium mb-2 ${
+                          darkMode ? "text-white" : ""
+                        }`}
                       >
                         পূর্ণ নাম *
                       </label>
@@ -418,16 +421,16 @@ const Services = () => {
                         id="name"
                         name="name"
                         required
-                        className={`w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 ${
-                          darkMode ? "bg-gray-600 text-white" : "bg-gray-100"
-                        }`}
+                        className="w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 bg-gray-100 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         placeholder="আপনার পূর্ণ নাম"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="email"
-                        className="block text-sm font-medium mb-2"
+                        className={`block text-sm font-medium mb-2 ${
+                          darkMode ? "text-white" : ""
+                        }`}
                       >
                         ইমেইল ঠিকানা *
                       </label>
@@ -436,9 +439,7 @@ const Services = () => {
                         id="email"
                         name="email"
                         required
-                        className={`w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 ${
-                          darkMode ? "bg-gray-600 text-white" : "bg-gray-100"
-                        }`}
+                        className="w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 bg-gray-100 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         placeholder="আপনার ইমেইল ঠিকানা"
                       />
                     </div>
@@ -447,7 +448,9 @@ const Services = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className="block text-sm font-medium mb-2"
+                        className={`block text-sm font-medium mb-2 ${
+                          darkMode ? "text-white" : ""
+                        }`}
                       >
                         ফোন নম্বর *
                       </label>
@@ -456,16 +459,16 @@ const Services = () => {
                         id="phone"
                         name="phone"
                         required
-                        className={`w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 ${
-                          darkMode ? "bg-gray-600 text-white" : "bg-gray-100"
-                        }`}
+                        className="w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 bg-gray-100 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         placeholder="আপনার ফোন নম্বর"
                       />
                     </div>
                     <div>
                       <label
                         htmlFor="service"
-                        className="block text-sm font-medium mb-2"
+                        className={`block text-sm font-medium mb-2 ${
+                          darkMode ? "text-white" : ""
+                        }`}
                       >
                         পরিষেবা আগ্রহ *
                       </label>
@@ -478,9 +481,7 @@ const Services = () => {
                           id="service"
                           name="service"
                           required
-                          className={`w-full p-3 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500 border-none ${
-                            darkMode ? "bg-gray-600 text-white" : "bg-gray-100"
-                          }`}
+                          className="w-full p-3 rounded-lg appearance-none focus:outline-none focus:ring-2 focus:ring-emerald-500 border-none bg-gray-100 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                         >
                           <option value="visa">ভিসা প্রক্রিয়াকরণ</option>
                           <option value="transportation">পরিবহন</option>
@@ -492,7 +493,7 @@ const Services = () => {
                           <option value="other">অন্যান্য</option>
                         </select>
                         <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-3">
-                          <i className="fas fa-chevron-down text-gray-500"></i>
+                          <FaChevronDown className="text-gray-500" />
                         </div>
                       </div>
                     </div>
@@ -500,7 +501,9 @@ const Services = () => {
                   <div className="mb-6">
                     <label
                       htmlFor="message"
-                      className="block text-sm font-medium mb-2"
+                      className={`block text-sm font-medium mb-2 ${
+                        darkMode ? "text-white" : ""
+                      }`}
                     >
                       আপনার বার্তা *
                     </label>
@@ -509,9 +512,7 @@ const Services = () => {
                       name="message"
                       required
                       rows={5}
-                      className={`w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 ${
-                        darkMode ? "bg-gray-600 text-white" : "bg-gray-100"
-                      }`}
+                      className="w-full p-3 rounded-lg border-none focus:ring-2 focus:ring-emerald-500 bg-gray-100 dark:bg-gray-600 dark:text-white dark:placeholder-gray-400"
                       placeholder="আপনার পরিষেবা প্রয়োজনীয়তার বিস্তারিত প্রদান করুন..."
                     ></textarea>
                   </div>
@@ -558,7 +559,7 @@ const Services = () => {
 
       {/* Call to Action */}
       <section
-        className={`py-16 ${darkMode ? "bg-gray-900" : "bg-emerald-600"}`}
+        className="py-16 bg-emerald-600 dark:bg-gray-900"
       >
         <div className="container mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold text-white mb-6">

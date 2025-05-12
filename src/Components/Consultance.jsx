@@ -39,7 +39,7 @@ const consultants = [
     id: 3,
     name: "মিজানুর রহমান আজহারী",
     designation: "সহকারী শরীআহ উপদেষ্টা",
-    qualification: "আলিম, দারুল উলूম দেওবন্দ",
+    qualification: "আলিম, দারুল উলূম দেওবন্দ",
     expertise: ["মানাসিকে হজ্ব বিশেষজ্ঞ", "ইসলামিক গাইড"],
     contact: {
       phone: "+880 1XXX-XXXXXX",
@@ -51,14 +51,14 @@ const consultants = [
 
 const Consultance = () => {
   return (
-    <section className="bg-gradient-to-b from-white to-gray-50 py-20">
+    <section className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <h2 className="text-5xl font-bold  mb-6 text-emerald-600">
+          <h2 className="text-3xl md:text-5xl font-bold  mb-6 text-emerald-600">
             আমাদের সম্মানিত শরী'আহ উপদেষ্টাগণ
           </h2>
           <div className="w-24 h-1 bg-emerald-500 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
             অভিজ্ঞ ও যোগ্য শরী'আহ উপদেষ্টাগণ আপনার হজ্ব ও ওমরাহ সংক্রান্ত সকল
             প্রশ্নের উত্তর দিতে প্রস্তুত
           </p>
@@ -68,7 +68,7 @@ const Consultance = () => {
           {consultants.map((consultant) => (
             <div
               key={consultant.id}
-              className="group bg-white rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300"
+              className="group bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
@@ -85,22 +85,22 @@ const Consultance = () => {
               </div>
 
               <div className="px-8 py-2">
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-emerald-600 transition-colors">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-emerald-600 transition-colors">
                   {consultant.name}
                 </h3>
 
-                <div className="flex items-center gap-3 text-gray-600 mb-2">
+                <div className="flex items-center gap-3 text-gray-600 dark:text-gray-300 mb-2">
                   <FaUniversity className="text-emerald-500 text-xl" />
                   <p className="text-sm">{consultant.qualification}</p>
                 </div>
 
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-gray-900">বিশেষজ্ঞতা:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">বিশেষজ্ঞতা:</h4>
                   <ul className="space-y-1">
                     {consultant.expertise.map((exp, index) => (
                       <li
                         key={index}
-                        className="flex items-center gap-2 text-gray-600"
+                        className="flex items-center gap-2 text-gray-600 dark:text-gray-300"
                       >
                         <div className="w-2 h-2 rotate-45 bg-emerald-500"></div>
                         <span className="text-sm">{exp}</span>
@@ -109,11 +109,11 @@ const Consultance = () => {
                   </ul>
                 </div>
 
-                <div className="mt-2 pt-2 border-t border-gray-100">
+                <div className="mt-2 pt-2 border-t border-gray-100 dark:border-gray-700">
                   <div className="flex flex-col space-y-1">
                     <a
                       href={`tel:${consultant.contact.phone}`}
-                      className="flex items-center gap-3 text-gray-600 hover:text-emerald-600 transition-colors"
+                      className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors"
                     >
                       <FaPhone className="text-emerald-500" />
                       <span className="text-sm">
@@ -122,7 +122,7 @@ const Consultance = () => {
                     </a>
                     <a
                       href={`mailto:${consultant.contact.email}`}
-                      className="flex items-center gap-3 text-gray-600 hover:text-emerald-600 transition-colors"
+                      className="flex items-center gap-3 text-gray-600 dark:text-gray-300 hover:text-emerald-600 transition-colors"
                     >
                       <FaEnvelope className="text-emerald-500" />
                       <span className="text-sm">
@@ -133,7 +133,7 @@ const Consultance = () => {
                 </div>
 
                 <button
-                  className="w-full mt-8 bg-emerald-50 text-emerald-600 py-4 rounded-xl font-medium 
+                  className="w-full mt-8 bg-emerald-50 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-400 py-4 rounded-xl font-medium 
                   group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 
                   flex items-center justify-center gap-2"
                 >

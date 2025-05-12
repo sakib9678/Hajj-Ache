@@ -5,6 +5,7 @@ import HomeContent from "../Home/HomeContent";
 import About from "../About/About";
 import Package from "../Package/Package";
 import Services from "../Services/Services";
+import UmrahPackage from "../Package/UmrahPackage";
 
 
 const AppRouter = () => {
@@ -17,8 +18,7 @@ const AppRouter = () => {
       <Routes>
         <Route element={<Home />} path="/">
           <Route element={<HomeContent />} path="/" />
-          <Route element={<About />} path="about" />
-          <Route element={<Package />} path="package" />
+          <Route element={<UmrahPackage />} path="umrah-packages" />
           <Route element={<Services />} path="service" />
         </Route>
       </Routes>

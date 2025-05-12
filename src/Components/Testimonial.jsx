@@ -2,16 +2,15 @@ import React, { useState } from "react";
 import { FaCalendarAlt, FaStar } from "react-icons/fa";
 
 const Testimonial = () => {
-  const [darkMode, setDarkMode] = useState(false);
   return (
     <div>
-      <section className="py-20">
+      <section className="py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-emerald-600">
+            <h2 className="text-4xl font-bold mb-4 text-emerald-600">
               আমাদের তীর্থযাত্রীরা যা বলেন
             </h2>
-            <p className="max-w-2xl mx-auto text-lg">
+            <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
               যারা আমাদের পরিষেবার অভিজ্ঞতা অর্জন করেছেন এবং আমাদের সাথে তাদের
               পবিত্র যাত্রা সম্পন্ন করেছেন তাদের কথা শুনুন।
             </p>
@@ -19,11 +18,7 @@ const Testimonial = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Testimonial 1 */}
-            <div
-              className={`rounded-xl p-8 ${
-                darkMode ? "bg-gray-800" : "bg-white shadow-lg"
-              }`}
-            >
+            <div className="rounded-xl p-8 bg-white shadow-lg dark:bg-gray-800">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                   <img
@@ -33,7 +28,9 @@ const Testimonial = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">আহমেদ আবদুল্লাহ</h4>
+                  <h4 className="font-bold text-gray-900 dark:text-white">
+                    আহমেদ আবদুল্লাহ
+                  </h4>
                   <div className="flex text-yellow-400 mt-1">
                     <FaStar />
                     <FaStar />
@@ -43,23 +40,19 @@ const Testimonial = () => {
                   </div>
                 </div>
               </div>
-              <p className="italic mb-4">
+              <p className="italic mb-4 text-gray-600 dark:text-gray-300">
                 "হজ আছে দ্বারা প্রদত্ত সেবা অসাধারণ ছিল। ভিসা প্রক্রিয়াকরণ থেকে
                 শুরু করে আবাসন এবং পরিবহন, সবকিছুই নির্বিঘ্ন ছিল। গাইডরা জ্ঞানী
                 এবং ধৈর্যশীল ছিলেন, আমাদের হজ যাত্রাকে সত্যিই স্মরণীয় করে
                 তুলেছিলেন।"
               </p>
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-gray-500 dark:text-gray-400">
                 <FaCalendarAlt className="mr-2" /> Hajj 2024
               </div>
             </div>
 
             {/* Testimonial 2 */}
-            <div
-              className={`rounded-xl p-8 ${
-                darkMode ? "bg-gray-800" : "bg-white shadow-lg"
-              }`}
-            >
+            <div className="rounded-xl p-8 bg-white shadow-lg dark:bg-gray-800">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                   <img
@@ -69,7 +62,9 @@ const Testimonial = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">ফাতিমা রহমান</h4>
+                  <h4 className="font-bold text-gray-900 dark:text-white">
+                    ফাতিমা রহমান
+                  </h4>
                   <div className="flex text-yellow-400 mt-1">
                     <FaStar />
                     <FaStar />
@@ -79,23 +74,19 @@ const Testimonial = () => {
                   </div>
                 </div>
               </div>
-              <p className="italic mb-4">
+              <p className="italic mb-4 text-gray-600 dark:text-gray-300">
                 "আমার উমরাহ অভিজ্ঞতা অসাধারণ ছিল। হজ আছে দ্বারা প্রদত্ত
                 পরিষেবাগুলি অত্যন্ত পেশাদার এবং সহায়ক ছিল। আমি তাদের ডিজিটাল
                 অ্যাপটি বিশেষভাবে পছন্দ করেছি, যা আমাকে আমার সময়সূচী এবং
                 স্থানগুলি ট্র্যাক করতে সাহায্য করেছে।"
               </p>
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-gray-500 dark:text-gray-400">
                 <FaCalendarAlt /> Umrah 2024
               </div>
             </div>
 
             {/* Testimonial 3 */}
-            <div
-              className={`rounded-xl p-8 ${
-                darkMode ? "bg-gray-800" : "bg-white shadow-lg"
-              }`}
-            >
+            <div className="rounded-xl p-8 bg-white shadow-lg dark:bg-gray-800">
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 rounded-full overflow-hidden mr-4">
                   <img
@@ -105,7 +96,9 @@ const Testimonial = () => {
                   />
                 </div>
                 <div>
-                  <h4 className="font-bold">ইব্রাহিম</h4>
+                  <h4 className="font-bold text-gray-900 dark:text-white">
+                    ইব্রাহিম
+                  </h4>
                   <div className="flex text-yellow-400 mt-1">
                     <FaStar />
                     <FaStar />
@@ -115,20 +108,20 @@ const Testimonial = () => {
                   </div>
                 </div>
               </div>
-              <p className="italic mb-4">
+              <p className="italic mb-4 text-gray-600 dark:text-gray-300">
                 "হজ আছে দ্বারা প্রদত্ত পরিষেবাগুলি আমার প্রত্যাশা ছাড়িয়ে গেছে।
                 তারা আমাদের জন্য সবকিছু পরিকল্পনা করেছে, এবং আমি তাদের
                 পেশাদারিত্ব এবং যত্নের জন্য কৃতজ্ঞ। আমি তাদের সুপারিশ করতে
                 পারি।"
               </p>
-              <div className="text-sm text-gray-500">
+              <div className="text-sm text-gray-500 dark:text-gray-400">
                 <FaCalendarAlt /> Hajj 2023
               </div>
             </div>
           </div>
 
           <div className="mt-12 text-center">
-            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-colors !rounded-button whitespace-nowrap cursor-pointer">
+            <button className="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium transition-colors cursor-pointer">
               আরও রিভিউ দেখুন
             </button>
           </div>
@@ -136,22 +129,20 @@ const Testimonial = () => {
       </section>
 
       {/* Call to Action */}
-      <section
-        className={`py-20 ${darkMode ? "bg-gray-900" : "bg-emerald-600"}`}
-      >
+      <section className="py-20 bg-emerald-600 dark:bg-gray-800">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-4xl font-bold text-white mb-6">
             আপনার পবিত্র যাত্রা শুরু করার জন্য প্রস্তুত?
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
+          <p className="text-lg text-white/80 dark:text-gray-300 max-w-2xl mx-auto mb-8">
             আমাদের বিস্তৃত প্যাকেজ এবং বিশেষজ্ঞ নির্দেশনার সাথে একটি
             আধ্যাত্মিকভাবে পূর্ণ হজ বা উমরাহ অভিজ্ঞতার দিকে প্রথম পদক্ষেপ নিন।
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-            <button className="bg-white text-emerald-600 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold transition-colors !rounded-button whitespace-nowrap cursor-pointer">
+            <button className="bg-white text-emerald-600 dark:bg-[#047756] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 px-8 py-4 rounded-lg font-bold transition-colors cursor-pointer">
               আপনার প্যাকেজ বুক করুন
             </button>
-            <button className="bg-transparent text-white border-2 border-white hover:bg-white/10 px-8 py-4 rounded-lg font-bold transition-colors !rounded-button whitespace-nowrap cursor-pointer">
+            <button className="bg-transparent text-white dark:text-[#047756] dark:border-[#047756] border-2 border-white hover:bg-white/10 px-8 py-4 rounded-lg font-bold transition-colors cursor-pointer">
               একজন পরামর্শকের সাথে কথা বলুন
             </button>
           </div>

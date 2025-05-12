@@ -31,11 +31,13 @@ const Service = () => {
   ];
   return (
     <div>
-      <section className={`py-20 ${darkMode ? "bg-gray-800" : "bg-gray-50"}`}>
+      <section className="py-20 bg-gray-50 dark:bg-gray-800 ">
         <div className="container mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold mb-4 text-emerald-600">আমাদের ব্যাপক সেবা</h2>
-            <p className="max-w-2xl mx-auto text-lg">
+            <h2 className="text-4xl font-bold mb-4 text-emerald-600">
+              আমাদের ব্যাপক সেবা
+            </h2>
+            <p className="max-w-2xl mx-auto text-lg text-gray-600 dark:text-gray-300">
               আমরা আপনার পবিত্র যাত্রার জন্য এন্ড-টু-এন্ড সমাধান প্রদান করি,
               প্রতিটি পদক্ষেপে সান্ত্বনা, নির্দেশনা এবং আধ্যাত্মিক পরিপূর্ণতা
               নিশ্চিত করি।
@@ -44,25 +46,21 @@ const Service = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {services.map((service) => (
-            <div
-              className={`rounded-xl p-6 transition-transform hover:-translate-y-2 cursor-pointer ${
-                darkMode ? "bg-gray-700" : "bg-white shadow-lg"
-              }`}
-             >
-              <div className="rounded-full bg-emerald-100 p-4 w-16 h-16 flex items-center justify-center mb-6">
-                {service.icon}
+              <div className="rounded-xl p-6 transition-transform hover:-translate-y-2 cursor-pointer bg-white dark:bg-gray-700 shadow-lg">
+                <div className="rounded-full bg-emerald-100 dark:bg-emerald-900/50 p-4 w-16 h-16 flex items-center justify-center mb-6">
+                  {service.icon}
+                </div>
+                <h3 className="text-2xl font-bold mb-3 text-emerald-600 dark:text-emerald-500">
+                  {service.title}
+                </h3>
+                <p className="mb-4 text-gray-600 dark:text-gray-300">{service.description}</p>
+                <a
+                  href="#"
+                  className="text-emerald-600 dark:text-emerald-500 font-medium hover:text-emerald-700 dark:hover:text-emerald-400 flex items-center"
+                >
+                  আরও জানুন <i className="fas fa-arrow-right ml-2"></i>
+                </a>
               </div>
-              <h3 className="text-xl font-bold mb-3 text-emerald-600">{service.title}</h3>
-              <p className="mb-4 text-gray-600">
-                  {service.description}
-              </p>
-              <a
-                href="#"
-                className="text-emerald-600 font-medium hover:text-emerald-700 flex items-center"
-              >
-                আরও জানুন <i className="fas fa-arrow-right ml-2"></i>
-              </a>
-            </div>
             ))}
           </div>
         </div>

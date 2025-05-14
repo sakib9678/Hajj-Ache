@@ -18,7 +18,7 @@ const App = () => {
       <Features />
       <Consultance />
       <Testimonial />
-      <ChatWidget />
+      
     </div>
   );
 };

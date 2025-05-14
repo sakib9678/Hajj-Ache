@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+
 import {
   FaBriefcaseMedical,
   FaBus,
@@ -20,7 +20,6 @@ import {
 } from "react-icons/fa";
 
 const Services = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const services = [
     {
       id: "visa",
@@ -199,11 +198,13 @@ const Services = () => {
         </div>
       </section>
       {/* Service Categories Grid */}
-      <section id="service-categories" className="py-16 ">
+      <section id="service-categories" className="py-16 dark:bg-gray-900">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">আমাদের সেবা বিভাগ</h2>
-            <p className="max-w-2xl mx-auto text-lg">
+            <h2 className="text-4xl font-bold mb-4 text-[#059669]">
+              আমাদের সেবা বিভাগ
+            </h2>
+            <p className="max-w-2xl mx-auto text-lg dark:text-white">
               আমাদের বিস্তৃত বিশেষায়িত সেবাগুলি থেকে নির্বাচন করুন, যা আপনার
               পবিত্র যাত্রাকে নির্বিঘ্ন এবং আধ্যাত্মিকভাবে পরিপূর্ণ করতে ডিজাইন
               করা হয়েছে।
@@ -213,14 +214,16 @@ const Services = () => {
             {services.map((service) => (
               <div
                 key={service.id}
-                className="rounded-xl overflow-hidden transition-all duration-300 "
+                className="dark:bg-gray-700 rounded-xl overflow-hidden transition-all duration-300 shadow-md hover:shadow-xl"
               >
                 <div className="p-8">
                   <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6">
                     <span className="text-2xl">{service.icon}</span>
                   </div>
-                  <h3 className="text-xl font-bold mb-3">{service.title}</h3>
-                  <p className="mb-4">{service.description}</p>
+                  <h3 className="text-xl font-bold mb-3 text-[#059669]">
+                    {service.title}
+                  </h3>
+                  <p className="mb-4 dark:text-white">{service.description}</p>
                   <div className="mb-4">
                     <span className="block text-sm text-gray-500 dark:text-gray-400">
                       Pricing
@@ -243,7 +246,7 @@ const Services = () => {
       </section>
 
       {/* Featured Service Spotlight */}
-      <section className="py-16 ">
+      <section className="py-16 dark:bg-gray-900">
         <div className="container mx-auto px-6">
           <div className="flex flex-col lg:flex-row items-center gap-12">
             <div className="w-full lg:w-1/2 rounded-xl overflow-hidden">
@@ -257,16 +260,20 @@ const Services = () => {
               <div className="inline-block px-4 py-1 rounded-full bg-emerald-100 text-emerald-600 font-medium text-sm mb-4">
                 Featured Service
               </div>
-              <h2 className="text-3xl font-bold mb-4">ভিআইপি পরিবহন পরিষেবা</h2>
-              <p className="text-lg mb-6">
+              <h2 className="text-3xl font-bold mb-4 text-[#059669]">
+                ভিআইপি পরিবহন পরিষেবা
+              </h2>
+              <p className="text-lg mb-6 dark:text-white">
                 আমাদের প্রিমিয়াম ভিআইপি পরিবহন পরিষেবার সাথে আরাম এবং সুবিধার
                 চূড়ান্ত অভিজ্ঞতা নিন, যা বিশেষভাবে হজ এবং ওমরাহ যাত্রীদের জন্য
                 ডিজাইন করা হয়েছে যারা গোপনীয়তা, আরাম এবং দক্ষতাকে মূল্যায়ন
                 করেন।
               </p>
               <div className="mb-8">
-                <h3 className="font-bold text-xl mb-3">কি অন্তর্ভুক্ত:</h3>
-                <ul className="space-y-2">
+                <h3 className="font-bold text-xl mb-3 dark:text-white">
+                  কি অন্তর্ভুক্ত:
+                </h3>
+                <ul className="space-y-2 dark:text-white">
                   <li className="flex items-start">
                     <FaCheckCircle className="text-emerald-600 mt-1 mr-2" />
                     <span>
@@ -317,25 +324,25 @@ const Services = () => {
       <section className="py-16 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-6">
           <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold mb-4">
-              কেন আমাদের পরিষেবা চয়ন করুন
+            <h2 className="text-4xl font-bold mb-4 text-[#059669]">
+              কেন আমাদের পরিষেবা বেছে নেবেন?
             </h2>
-            <p className="max-w-2xl mx-auto text-lg">
+            <p className="max-w-2xl mx-auto text-lg dark:text-white">
               আমরা আপনার তীর্থযাত্রার প্রতিটি বিস্তারিত বিষয়ে মনোযোগ দিয়ে
               অসাধারণ পরিষেবা গুণমান প্রদান করতে গর্বিত।
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
             {serviceBenefits.map((Benefit) => (
-              <div className="text-center w-56 h-72 p-2 rounded-md shadow-lg">
+              <div className="text-center w-56 h-72 p-2 rounded-md shadow-lg dark:bg-gray-700">
                 <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                   <i className="fas fa-user-tie text-3xl"></i>
                   <span className="text-3xl">{Benefit.icon}</span>
                 </div>
-                <h3 className="text-xl font-bold mb-2">{Benefit.title}</h3>
-                <p className={darkMode ? "text-gray-300" : "text-gray-600"}>
-                  {Benefit.description}
-                </p>
+                <h3 className="text-xl font-bold mb-2 text-[#059669]">
+                  {Benefit.title}
+                </h3>
+                <p className="dark:text-gray-300">{Benefit.description}</p>
               </div>
             ))}
           </div>
@@ -343,17 +350,12 @@ const Services = () => {
       </section>
 
       {/* Service Inquiry Form */}
-      <section
-        id="inquiry-form"
-        className="py-16 bg-white dark:bg-gray-800"
-      >
+      <section id="inquiry-form" className="py-16 bg-white dark:bg-gray-800">
         <div className="container mx-auto px-6">
           <div className=" mx-auto ">
             <div className="flex flex-col lg:flex-row rounded-xl overflow-hidden">
-              <div
-                className="lg:w-2/5 p-10 bg-emerald-600 text-white dark:bg-gray-700"
-              >
-                <h2 className="text-3xl font-bold mb-6 text-white">
+              <div className="lg:w-2/5 p-10 bg-emerald-600 text-white dark:bg-gray-700">
+                <h2 className="text-3xl font-bold mb-6 text-white dark:text-[#059669]">
                   যোগাযোগ করুন
                 </h2>
                 <p className="mb-8 text-white/90">
@@ -367,7 +369,9 @@ const Services = () => {
                       <FaMapMarkerAlt className="text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">আমাদের অবস্থান</h4>
+                      <h4 className="font-bold text-white dark:text-[#059669]">
+                        আমাদের অবস্থান
+                      </h4>
                       <p className="text-white/80">
                         হুসাইন মার্কেট, উত্তর বাড্ডা , ঢাকা, বাংলাদেশ
                       </p>
@@ -379,7 +383,9 @@ const Services = () => {
                       <FaPhoneAlt className="text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">ফোন নম্বর</h4>
+                      <h4 className="font-bold text-white dark:text-[#059669]">
+                        ফোন নম্বর
+                      </h4>
                       <p className="text-white/80">+966 12 345 6789 (সাধারণ)</p>
                       <p className="text-white/80">
                         +966 12 345 6780 (২৪/৭ সহায়তা)
@@ -392,27 +398,25 @@ const Services = () => {
                       <FaEnvelope className="text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-white">ইমেইল ঠিকানা</h4>
+                      <h4 className="font-bold text-white dark:text-[#059669]">
+                        ইমেইল ঠিকানা
+                      </h4>
                       <p className="text-white/80">info@hajjease.com</p>
                       <p className="text-white/80">support@hajjease.com</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div
-                className={`lg:w-3/5 p-10 ${
-                  darkMode ? "bg-gray-700" : "bg-white"
-                }`}
-              >
-                <h3 className="text-2xl font-bold mb-6 text-[#059669]">পরিষেবা তদন্ত ফর্ম</h3>
+              <div className="lg:w-3/5 p-10 bg-white dark:bg-gray-700">
+                <h3 className="text-2xl font-bold mb-6 text-[#059669]">
+                  পরিষেবা তদন্ত ফর্ম
+                </h3>
                 <form>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                     <div>
                       <label
                         htmlFor="name"
-                        className={`block text-sm font-medium mb-2 ${
-                          darkMode ? "text-white" : ""
-                        }`}
+                        className="block text-sm font-medium mb-2"
                       >
                         পূর্ণ নাম *
                       </label>
@@ -428,9 +432,7 @@ const Services = () => {
                     <div>
                       <label
                         htmlFor="email"
-                        className={`block text-sm font-medium mb-2 ${
-                          darkMode ? "text-white" : ""
-                        }`}
+                        className="block text-sm font-medium mb-2"
                       >
                         ইমেইল ঠিকানা *
                       </label>
@@ -448,9 +450,7 @@ const Services = () => {
                     <div>
                       <label
                         htmlFor="phone"
-                        className={`block text-sm font-medium mb-2 ${
-                          darkMode ? "text-white" : ""
-                        }`}
+                        className="block text-sm font-medium mb-2"
                       >
                         ফোন নম্বর *
                       </label>
@@ -466,17 +466,11 @@ const Services = () => {
                     <div>
                       <label
                         htmlFor="service"
-                        className={`block text-sm font-medium mb-2 ${
-                          darkMode ? "text-white" : ""
-                        }`}
+                        className="block text-sm font-medium mb-2"
                       >
                         পরিষেবা আগ্রহ *
                       </label>
-                      <div
-                        className={`relative rounded-lg ${
-                          darkMode ? "bg-gray-600" : "bg-gray-100"
-                        }`}
-                      >
+                      <div className="relative rounded-lg  dark:bg-gray-600">
                         <select
                           id="service"
                           name="service"
@@ -501,9 +495,7 @@ const Services = () => {
                   <div className="mb-6">
                     <label
                       htmlFor="message"
-                      className={`block text-sm font-medium mb-2 ${
-                        darkMode ? "text-white" : ""
-                      }`}
+                      className="block text-sm font-medium mb-2"
                     >
                       আপনার বার্তা *
                     </label>
@@ -558,11 +550,9 @@ const Services = () => {
       </section>
 
       {/* Call to Action */}
-      <section
-        className="py-16 bg-emerald-600 dark:bg-gray-900"
-      >
+      <section className="py-16 bg-emerald-600 dark:bg-gray-900">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
+          <h2 className="text-3xl font-bold text-white mb-6 dark:text-[#059669]">
             আপনার তীর্থযাত্রার অভিজ্ঞতা আরও উন্নত করতে প্রস্তুত?
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">

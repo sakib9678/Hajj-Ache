@@ -1,20 +1,22 @@
+import { link } from "framer-motion/client";
 import React, { useState } from "react";
 import { FaKaaba, FaMosque, FaPassport, FaPlane } from "react-icons/fa";
 
 const Service = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const services = [
     {
       title: "হজ্ব প্যাকেজ",
       description:
         "হজ্ব প্যাকেজ পরিচালনায় আমাদের রয়েছে দীর্ঘ দক্ষতা ও অভিজ্ঞতা। এই অভিজ্ঞতার আলোকে হজ্ব পালনে ইচ্ছুকদের জন্য যথাযথ পরামর্শ এবং হজ্ব সংক্রান্ত বিষয়ে সার্বিক সহযোগীতা করা হয়।",
       icon: <FaKaaba className="text-2xl text-emerald-600" />,
+      link: "hajj-packages"
     },
     {
       title: "ওমরাহ প্যাকেজ",
       description:
         "ওমরাহ প্যাকেজ পরিচালনায় আমাদের রয়েছে দীর্ঘ দক্ষতা ও অভিজ্ঞতা। এই অভিজ্ঞতার আলোকে ওমরাহ পালনে ইচ্ছুকদের জন্য যথাযথ পরামর্শ এবং ওমরাহ সংক্রান্ত বিষয়ে সার্বিক সহযোগীতা করা হয়।",
       icon: <FaMosque className="text-2xl text-emerald-600" />,
+      link: "umrah-packages"
     },
     {
       title: "এয়ার টিকেটিং",
@@ -55,7 +57,7 @@ const Service = () => {
                 </h3>
                 <p className="mb-4 text-gray-600 dark:text-gray-300">{service.description}</p>
                 <a
-                  href="#"
+                  href={service.link}
                   className="text-emerald-600 dark:text-emerald-500 font-medium hover:text-emerald-700 dark:hover:text-emerald-400 flex items-center"
                 >
                   আরও জানুন <i className="fas fa-arrow-right ml-2"></i>

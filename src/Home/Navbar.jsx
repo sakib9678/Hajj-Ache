@@ -87,7 +87,7 @@ const Navbar = () => {
                         ওমরাহ প্যাকেজসমূহ
                       </a>
                       <a
-                        href="#"
+                        href="/hajj-packages"
                         className="block px-4 py-2  text-gray-700 hover:text-[#059669]"
                       >
                         হজ্ব প্যাকেজসমূহ
@@ -99,11 +99,14 @@ const Navbar = () => {
               <a href="/service" className="nav-link hover:text-[#059669]">
                 সেবাসমূহ
               </a>
-              <a href="" className="nav-link hover:text-[#059669]">
+              <a href="/umrah-guideline" className="nav-link hover:text-[#059669]">
                 গাইড
               </a>
-              <a href="#" className="nav-link hover:text-[#059669]">
+              <a href="/about" className="nav-link hover:text-[#059669]">
                 আমাদের সম্পর্কে
+              </a>
+              <a href="" className="nav-link hover:text-[#059669]">
+                যোগাযোগ
               </a>
             </div>
 
@@ -196,7 +199,7 @@ const Navbar = () => {
                         ওমরাহ প্যাকেজসমূহ
                       </a>
                       <a
-                        href="#"
+                        href="/hajj-packages"
                         className="block px-4 py-2  text-gray-700 hover:text-[#059669]"
                       >
                         হজ্ব প্যাকেজসমূহ
@@ -208,11 +211,14 @@ const Navbar = () => {
                 <a href="/service" className="mobile-nav-link">
                   সেবাসমূহ
                 </a>
-                <a href="" className="mobile-nav-link">
+                <a href="umrah-guideline" className="mobile-nav-link">
                   গাইড
                 </a>
-                <a href="#" className="mobile-nav-link">
+                <a href="about" className="mobile-nav-link">
                   আমাদের সম্পর্কে
+                </a>
+                <a href="" className="mobile-nav-link">
+                  যোগাযোগ
                 </a>
               </div>
             </div>

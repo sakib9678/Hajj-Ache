@@ -1,4 +1,3 @@
-
 import {
   FaBriefcaseMedical,
   FaBus,
@@ -18,8 +17,10 @@ import {
   FaTags,
   FaUserTie,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Services = () => {
+  const navigate = useNavigate();
   const services = [
     {
       id: "visa",
@@ -35,6 +36,7 @@ const Services = () => {
         "অবস্থা ট্র্যাকিং",
         "জরুরি প্রক্রিয়াকরণ উপলব্ধ",
       ],
+      link: "visa-processing",
     },
     {
       id: "transportation",
@@ -148,7 +150,8 @@ const Services = () => {
 
   return (
     <div className="min-h-screen">
-      <section className="relative pt-28 pb-20">
+      {/* Hero Section */}
+      <section className="relative pt-20 sm:pt-24 md:pt-28 pb-12 sm:pb-16 md:pb-20">
         <div className="absolute inset-0 z-0 overflow-hidden">
           <img
             src="https://readdy.ai/api/search-image?query=elegant%2520Islamic%2520architectural%2520background%2520with%2520subtle%2520geometric%2520patterns%2520and%2520soft%2520gradient%2520from%2520emerald%2520to%2520teal%2520perfect%2520for%2520website%2520hero%2520section%2520professional%2520high%2520quality%2520with%2520perfect%2520lighting%2520and%2520composition%2520clean%2520minimal%2520design&width=1440&height=500&seq=24&orientation=landscape"
@@ -198,8 +201,8 @@ const Services = () => {
         </div>
       </section>
       {/* Service Categories Grid */}
-      <section id="service-categories" className="py-16 dark:bg-gray-900">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-[#059669]">
               আমাদের সেবা বিভাগ
@@ -210,11 +213,11 @@ const Services = () => {
               করা হয়েছে।
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service) => (
               <div
                 key={service.id}
-                className="dark:bg-gray-700 rounded-xl overflow-hidden transition-all duration-300 shadow-md hover:shadow-xl"
+                className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all"
               >
                 <div className="p-8">
                   <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mb-6">
@@ -233,7 +236,7 @@ const Services = () => {
                     </span>
                   </div>
                   <button
-                    onClick={() => setActiveTab(service.id)}
+                    onClick={() => navigate(service.link)}
                     className="mt-2 bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-2 rounded-lg font-medium transition-colors !rounded-button whitespace-nowrap cursor-pointer"
                   >
                     আরও জানুন
@@ -321,8 +324,8 @@ const Services = () => {
       </section>
 
       {/* Service Benefits */}
-      <section className="py-16 bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-6">
+      <section className="py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
             <h2 className="text-4xl font-bold mb-4 text-[#059669]">
               কেন আমাদের পরিষেবা বেছে নেবেন?
@@ -332,9 +335,9 @@ const Services = () => {
               অসাধারণ পরিষেবা গুণমান প্রদান করতে গর্বিত।
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             {serviceBenefits.map((Benefit) => (
-              <div className="text-center w-56 h-72 p-2 rounded-md shadow-lg dark:bg-gray-700">
+              <div className="text-center p-4 sm:p-6">
                 <div className="w-20 h-20 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto mb-4">
                   <i className="fas fa-user-tie text-3xl"></i>
                   <span className="text-3xl">{Benefit.icon}</span>
@@ -350,11 +353,11 @@ const Services = () => {
       </section>
 
       {/* Service Inquiry Form */}
-      <section id="inquiry-form" className="py-16 bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-6">
+      <section id="inquiry-form" className="py-12 sm:py-16">
+        <div className="container mx-auto px-4 sm:px-6">
           <div className=" mx-auto ">
-            <div className="flex flex-col lg:flex-row rounded-xl overflow-hidden">
-              <div className="lg:w-2/5 p-10 bg-emerald-600 text-white dark:bg-gray-700">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="p-6 sm:p-8 bg-emerald-600 rounded-xl">
                 <h2 className="text-3xl font-bold mb-6 text-white dark:text-[#059669]">
                   যোগাযোগ করুন
                 </h2>
@@ -407,7 +410,7 @@ const Services = () => {
                   </div>
                 </div>
               </div>
-              <div className="lg:w-3/5 p-10 bg-white dark:bg-gray-700">
+              <div className="p-6 sm:p-8 bg-white dark:bg-gray-800 rounded-xl">
                 <h3 className="text-2xl font-bold mb-6 text-[#059669]">
                   পরিষেবা তদন্ত ফর্ম
                 </h3>

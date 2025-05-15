@@ -123,7 +123,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://media.istockphoto.com/id/1346944001/photo/close-up-of-co-workers-stacking-their-hands-together.jpg?s=612x612&w=0&k=20&c=lidJcFUSR3rkMt4B0yoNwH55lz3sth9o2280keqBXGE="
+                src="https://media.istockphoto.com/id/1433126431/photo/silhouette-of-climbers-who-climbed-to-the-top-of-the-mountain-thanks-to-mutual-assistance-and.jpg?s=612x612&w=0&k=20&c=qYdKGrhdKAPQiCEfWdTau8lSFSDW8Zy3hWklA6-78Qg="
                 alt="Our Team"
                 className="rounded-2xl shadow-xl"
               />

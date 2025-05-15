@@ -50,7 +50,7 @@ const Hero = () => {
           alt="Kaaba during Hajj"
           className="w-full h-full object-cover object-top"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-white/90 to-white/50 dark:bg-gray-900/70"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white/50 to-white/30 dark:bg-gray-900/70"></div>
       </div>
 
       <div className="container mx-auto px-6 py-20 relative z-10">

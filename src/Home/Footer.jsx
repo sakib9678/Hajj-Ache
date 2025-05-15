@@ -41,7 +41,7 @@ const Footer = () => {
             {/* Company Info */}
             <div>
               <div className=" font-bold text-emerald-400 mb-4 flex items-center">
-                <FaKaaba className="text-4xl mr-2"/>
+                <FaKaaba className="text-4xl mr-2" />
 
                 <span className="text-2xl">হজ্ব আছে</span>
               </div>
@@ -80,26 +80,37 @@ const Footer = () => {
 
             {/* Quick Links */}
             <div>
-              <h4 className="text-lg font-bold mb-4 text-emerald-400">দ্রুত লিঙ্ক</h4>
+              <h4 className="text-lg font-bold mb-4 text-emerald-400">
+                দ্রুত লিঙ্ক
+              </h4>
               <ul className="space-y-2">
-                {["হোম", "হজ প্যাকেজ", "উমরাহ প্যাকেজ", "পরিষেবাসমূহ", "রিসোর্স", "আমাদের সম্পর্কে", "যোগাযোগ"].map(
-                  (item) => (
-                    <li key={item}>
-                      <a
-                        href="#"
-                        className="text-gray-300 hover:text-emerald-400 transition-colors cursor-pointer"
-                      >
-                        {item}
-                      </a>
-                    </li>
-                  )
-                )}
+                {[
+                  { name: "হোম", link: "/" }, 
+                  {name: "পরিষেবাসমূহ", link:"#"},
+                  {name: "রিসোর্স", link:"#"},
+                  { name: "হজ প্যাকেজ", link: "#" },
+                  { name: "উমরাহ প্যাকেজ", link: "#" },
+                  { name: "আমাদের সম্পর্কে", link: "#" },
+                  { name: "যোগাযোগ", link: "#" },
+                  { name: "অ্যাফিলিয়েট যোগদান", link: "/affiliate" },
+                ].map((item) => (
+                  <li key={item}>
+                    <a
+                      href={item.link}
+                      className="text-gray-300 hover:text-emerald-400 transition-colors cursor-pointer"
+                    >
+                      {item.name}
+                    </a>
+                  </li>
+                ))}
               </ul>
             </div>
 
             {/* Resources */}
             <div>
-              <h4 className="text-lg font-bold mb-4 text-emerald-400">রিসোর্স</h4>
+              <h4 className="text-lg font-bold mb-4 text-emerald-400">
+                রিসোর্স
+              </h4>
               <ul className="space-y-2">
                 {[
                   "হজ গাইড",
@@ -124,22 +135,24 @@ const Footer = () => {
 
             {/* Contact Info */}
             <div>
-              <h4 className="text-lg font-bold mb-4 text-emerald-400">যোগাযোগ করুন</h4>
+              <h4 className="text-lg font-bold mb-4 text-emerald-400">
+                যোগাযোগ করুন
+              </h4>
               <ul className="space-y-3 text-gray-300">
                 <li className="flex items-start">
-                  <FaMapMarkerAlt className="mt-1 mr-3 text-emerald-400"/>
+                  <FaMapMarkerAlt className="mt-1 mr-3 text-emerald-400" />
                   <span>হোসেন মার্কেট, উত্তর বাড্ডা, ঢাকা, বাংলাদেশ</span>
                 </li>
                 <li className="flex items-center">
-                  <FaPhoneAlt className=" mr-3 text-emerald-400"/>
+                  <FaPhoneAlt className=" mr-3 text-emerald-400" />
                   <span>+৮৮০ ১২৩৪৫৬৭৮৯১</span>
                 </li>
                 <li className="flex items-center">
-                  <FaEnvelope className="mr-3 text-emerald-400"/>
+                  <FaEnvelope className="mr-3 text-emerald-400" />
                   <span>info@hajjease.com</span>
                 </li>
                 <li className="flex items-center">
-                  <FaHeadset className="mr-3 text-emerald-400"/>
+                  <FaHeadset className="mr-3 text-emerald-400" />
                   <span>24/7 Support: +৮৮০ ১২৩৪৫৬৭৮৯১</span>
                 </li>
               </ul>
@@ -176,20 +189,25 @@ const Footer = () => {
           <div className="pt-8 border-t border-gray-700">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
-                <p className="text-gray-300">&copy; 2025 হজ আছে. All rights reserved.</p>
+                <p className="text-gray-300">
+                  &copy; 2025 হজ আছে. All rights reserved.
+                </p>
               </div>
               <div className="flex flex-wrap justify-center space-x-4">
-                {["পরিষেবার শর্তাবলী", "গোপনীয়তা নীতি", "রিফান্ড নীতি", "লাইসেন্সিং"].map(
-                  (item) => (
-                    <a
-                      key={item}
-                      href="#"
-                      className="text-gray-300 hover:text-emerald-400 transition-colors mb-2 cursor-pointer"
-                    >
-                      {item}
-                    </a>
-                  )
-                )}
+                {[
+                  "পরিষেবার শর্তাবলী",
+                  "গোপনীয়তা নীতি",
+                  "রিফান্ড নীতি",
+                  "লাইসেন্সিং",
+                ].map((item) => (
+                  <a
+                    key={item}
+                    href="#"
+                    className="text-gray-300 hover:text-emerald-400 transition-colors mb-2 cursor-pointer"
+                  >
+                    {item}
+                  </a>
+                ))}
               </div>
               <div className="flex space-x-2 mt-4 md:mt-0 text-gray-300">
                 <FaCcVisa className="text-2xl" />

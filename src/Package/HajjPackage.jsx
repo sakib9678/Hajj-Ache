@@ -3,16 +3,19 @@ import hotel from "../assets/images/hotel.jpg";
 import visa from "../assets/images/visa.png";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
+import hajjHero from "../assets/images/hajj-packages-hero.avif";
 import {
   FaStar,
   FaUsers,
   FaPlaneDeparture,
   FaCertificate,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const HajjPackage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
   const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
 
   const packages = [
     {
@@ -209,7 +212,7 @@ const HajjPackage = () => {
       {/* Hero Section */}
       <div className="relative h-[80vh]">
         <img
-          src="https://images.unsplash.com/photo-1693590614566-1d3ea9ef32f7?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          src={hajjHero}
           alt="মসজিদুল হারাম"
           className="w-full h-full object-cover "
         />
@@ -330,10 +333,13 @@ const HajjPackage = () => {
                     ))}
                   </ul>
                   <button
-                    onClick={() => setSelectedPackage(pkg.id)}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      navigate("/contact");
+                    }}
                     className="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-semibold transition-all"
                   >
-                    বিস্তারিত দেখুন
+                    প্যাকেজ বুক করুন
                   </button>
                 </div>
               </div>
@@ -354,7 +360,9 @@ const HajjPackage = () => {
                 {requirements.map((req, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900 rounded-full flex items-center justify-center flex-shrink-0">
-                     <span  className="w-6 h-6 text-emerald-600 dark:text-emerald-300">{req.icon}</span>
+                      <span className="w-6 h-6 text-emerald-600 dark:text-emerald-300">
+                        {req.icon}
+                      </span>
                     </div>
                     <div>
                       <p className="text-lg text-gray-600 dark:text-gray-300">
@@ -487,7 +495,7 @@ const HajjPackage = () => {
                   <h3 className="text-xl font-bold text-emerald-700 dark:text-emerald-400">
                     {faq.question}
                   </h3>
-                  
+
                   <svg
                     className={`w-6 h-6 text-emerald-600 transform transition-transform duration-300 ${
                       openFaq === index ? "rotate-180" : ""
@@ -503,7 +511,6 @@ const HajjPackage = () => {
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                  
                 </button>
                 <div
                   className={`transition-all duration-300 ${

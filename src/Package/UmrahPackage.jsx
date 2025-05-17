@@ -3,10 +3,17 @@ import hotel from "../assets/images/hotel.jpg";
 import visa from "../assets/images/visa.png";
 import { FiPhone } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
+import umrahHero from "../assets/images/umrah-packages.jpeg";
+import umrahAbout from "../assets/images/umrah-package-about.avif";
+import visaApplication from "../assets/images/visa-application.jpg";
+import umrahFazilot from "../assets/images/umrah-fazilot.jpg";
+import { useNavigate } from "react-router-dom";
+
 
 const UmrahPackage = () => {
   const [selectedPackage, setSelectedPackage] = useState(null);
-  const [openFaq, setOpenFaq] = useState(null); // Add this line
+  const [openFaq, setOpenFaq] = useState(null);
+  const navigate = useNavigate();
 
   const packages = [
     {
@@ -115,7 +122,7 @@ const UmrahPackage = () => {
       {/* Hero Section */}
       <div className="relative h-[80vh]">
         <img
-          src="https://images.pexels.com/photos/161276/moscow-cathedral-mosque-prospekt-mira-ramadan-sky-161276.jpeg"
+          src={umrahHero}
           alt="মসজিদুল হারাম"
           className="w-full h-full object-cover"
         />
@@ -219,7 +226,7 @@ const UmrahPackage = () => {
             </div>
             <div className="relative">
               <img
-                src="https://images.unsplash.com/photo-1591604129939-f1efa4d9f7fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80"
+                src={umrahAbout}
                 alt="গাইডেড উমরাহ প্যাকেজ"
                 className="rounded-lg shadow-lg w-full h-[400px] object-cover"
               />
@@ -282,10 +289,13 @@ const UmrahPackage = () => {
                     ))}
                   </ul>
                   <button
-                    onClick={() => setSelectedPackage(pkg.id)}
+                    onClick={() => {
+                      window.scrollTo(0, 0);
+                      navigate("/contact");
+                    }}
                     className="w-full mt-6 bg-emerald-600 hover:bg-emerald-700 text-white py-3 rounded-lg font-semibold transition-all"
                   >
-                    বিস্তারিত দেখুন
+                    প্যাকেজ বুক করুন
                   </button>
                 </div>
               </div>
@@ -813,7 +823,7 @@ const UmrahPackage = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className="relative">
               <img
-                src="https://www.arabnews.com/sites/default/files/styles/n_670_395/public/2022/07/08/3324586-480641889.jpg?itok=j6DlIQMK"
+                src={umrahFazilot}
                 alt="উমরাহ'র ফজিলত"
                 className="rounded-lg shadow-xl w-full h-[500px] object-cover"
               />
@@ -1022,7 +1032,7 @@ const UmrahPackage = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Contact Section */}
       <section className="py-20 bg-emerald-600 dark:bg-gray-800">
         <div className="container mx-auto px-6 text-center">
@@ -1032,11 +1042,11 @@ const UmrahPackage = () => {
           </p>
           <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
             <button className="bg-white text-emerald-600 dark:bg-[#047756] dark:text-white hover:bg-gray-100 dark:hover:bg-gray-600 px-8 py-4 rounded-lg font-bold transition-colors cursor-pointer flex items-center ">
-              <FiPhone className="text-xl mr-2"/>
+              <FiPhone className="text-xl mr-2" />
               <span>কল করুন: ০১৭১১-১২৩৪৫৬</span>
             </button>
             <button className="bg-transparent text-white dark:text-[#047756] dark:border-[#047756] border-2 border-white hover:bg-white/10 px-8 py-4 rounded-lg font-bold transition-colors cursor-pointer flex items-center">
-              <MdOutlineEmail className="text-xl mr-2"/>
+              <MdOutlineEmail className="text-xl mr-2" />
               <span>ইমেইল করুন</span>
             </button>
           </div>

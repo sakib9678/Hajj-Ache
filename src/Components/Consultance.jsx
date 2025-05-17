@@ -53,22 +53,22 @@ const Consultance = () => {
   return (
     <section className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-5xl font-bold  mb-6 text-emerald-600">
+        <div className="text-center mb-12 md:mb-20 px-4">
+          <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold mb-4 md:mb-6 text-emerald-600">
             আমাদের সম্মানিত শরী'আহ উপদেষ্টাগণ
           </h2>
-          <div className="w-24 h-1 bg-emerald-500 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+          <div className="w-16 md:w-24 h-1 bg-emerald-500 mx-auto mb-4 md:mb-6"></div>
+          <p className="text-base md:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
             অভিজ্ঞ ও যোগ্য শরী'আহ উপদেষ্টাগণ আপনার হজ্ব ও ওমরাহ সংক্রান্ত সকল
             প্রশ্নের উত্তর দিতে প্রস্তুত
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-10 px-4">
           {consultants.map((consultant) => (
             <div
               key={consultant.id}
-              className="group bg-white dark:bg-gray-800 rounded-3xl shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300"
+              className="group bg-white dark:bg-gray-800 rounded-2xl md:rounded-3xl shadow-lg md:shadow-xl overflow-hidden transform hover:scale-105 transition-all duration-300"
             >
               <div className="relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
@@ -77,15 +77,15 @@ const Consultance = () => {
                   alt={consultant.name}
                   className="w-full h-60 object-cover"
                 />
-                <div className="absolute bottom-4 left-4 z-20">
-                  <p className="text-white text-sm font-semibold px-3 py-1 bg-emerald-600 rounded-full inline-block">
+                <div className="absolute bottom-2 md:bottom-4 left-2 md:left-4 z-20">
+                  <p className="text-white text-xs md:text-sm font-semibold px-2 md:px-3 py-1 bg-emerald-600 rounded-full inline-block">
                     {consultant.designation}
                   </p>
                 </div>
               </div>
 
-              <div className="px-8 py-2">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-emerald-600 transition-colors">
+              <div className="px-4 md:px-8 py-4 md:py-6">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 group-hover:text-emerald-600 transition-colors">
                   {consultant.name}
                 </h3>
 
@@ -95,7 +95,9 @@ const Consultance = () => {
                 </div>
 
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-gray-900 dark:text-white">বিশেষজ্ঞতা:</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white">
+                    বিশেষজ্ঞতা:
+                  </h4>
                   <ul className="space-y-1">
                     {consultant.expertise.map((exp, index) => (
                       <li
@@ -132,11 +134,7 @@ const Consultance = () => {
                   </div>
                 </div>
 
-                <button
-                  className="w-full mt-8 bg-emerald-50 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-400 py-4 rounded-xl font-medium 
-                  group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 
-                  flex items-center justify-center gap-2"
-                >
+                <button className="w-full mt-6 md:mt-8 text-sm md:text-base bg-emerald-50 dark:bg-emerald-900 text-emerald-600 dark:text-emerald-400 py-3 md:py-4 rounded-xl font-medium group-hover:bg-emerald-600 group-hover:text-white transition-all duration-300 flex items-center justify-center gap-2">
                   যোগাযোগ করুন
                   <FaArrowRight className="group-hover:translate-x-1 transition-transform" />
                 </button>

@@ -1,3 +1,4 @@
+import { link } from "framer-motion/client";
 import React, { useState } from "react";
 import {
   FaHotel,
@@ -6,10 +7,11 @@ import {
   FaUserTie,
   FaMosque,
 } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Packege = () => {
-  const [darkMode, setDarkMode] = useState(false);
   const [activeTab, setActiveTab] = useState("umrah");
+  const navigate = useNavigate();
 
   const umrahPackages = [
     {
@@ -17,6 +19,7 @@ const Packege = () => {
       price: "২,৯৯,৯৯৯",
       perMonth: "২৪,৯৯৯",
       isPopular: false,
+      link: "umrah-packages",
       features: {
         accommodation: {
           icon: <FaHotel />,
@@ -55,6 +58,7 @@ const Packege = () => {
       price: "৪,৪৯,৯৯৯",
       perMonth: "৩৭,৪৯৯",
       isPopular: true,
+      link: "umrah-packages",
       features: {
         accommodation: {
           icon: <FaHotel />,
@@ -93,6 +97,7 @@ const Packege = () => {
       price: "৬,৯৯,৯৯৯",
       perMonth: "৫৮,৩৩৩",
       isPopular: false,
+      link: "umrah-packages",
       features: {
         accommodation: {
           icon: <FaHotel />,
@@ -134,6 +139,7 @@ const Packege = () => {
       price: "৯,৯৯,৯৯৯",
       perMonth: "৮৩,৩৩৩",
       isPopular: false,
+      link: "hajj-packages",
       features: {
         accommodation: {
           icon: <FaHotel />,
@@ -172,6 +178,7 @@ const Packege = () => {
       price: "১২,৯৯,৯৯৯",
       perMonth: "১,০৮,৩৩৩",
       isPopular: true,
+      link: "hajj-packages",
       features: {
         accommodation: {
           icon: <FaHotel />,
@@ -210,6 +217,7 @@ const Packege = () => {
       price: "১৫,৯৯,৯৯৯",
       perMonth: "১,৩৩,৩৩৩",
       isPopular: false,
+      link: "hajj-packages",
       features: {
         accommodation: {
           icon: <FaHotel />,
@@ -328,14 +336,17 @@ const Packege = () => {
           ))}
         </div>
 
-        <button
+        <button onClick={() => {
+        window.scrollTo(0, 0);
+        navigate(pkg.link);
+      }}
           className={`w-full mt-8 py-3 rounded-xl font-medium transition-all duration-300 ${
             pkg.isPopular
               ? "bg-white text-emerald-600 hover:bg-emerald-50"
               : "bg-emerald-600 text-white hover:bg-emerald-700"
           }`}
         >
-          প্যাকেজ বুক করুন
+          বিস্তারিত দেখুন
         </button>
       </div>
     </div>
@@ -345,20 +356,14 @@ const Packege = () => {
     <div className="dark:bg-gray-900 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 py-16 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2
-            className="text-5xl font-bold mb-4 text-emerald-60
-              dark:text-white 0"
-          >
+          <h2 className="text-3xl md:text-5xl font-bold mb-4 text-emerald-600 px-4">
             আমাদের প্যাকেজসমূহ
           </h2>
-          <p
-            className="text-xl max-w-3xl mx-auto mb-8 
-              dark:text-gray-300 text-gray-600"
-          >
+          <p className="text-base md:text-xl max-w-3xl mx-auto mb-8 px-4 dark:text-gray-300 text-gray-600">
             আপনার বাজেট এবং প্রয়োজন অনুযায়ী সেরা প্যাকেজটি বেছে নিন
           </p>
 
-          <div className="flex justify-center space-x-4 mb-12">
+          <div className="flex flex-col sm:flex-row justify-center space-y-2 sm:space-y-0 sm:space-x-4 mb-12 px-4">
             <button
               onClick={() => setActiveTab("umrah")}
               className={`px-6 py-2 text-lg rounded-full font-medium transition-all duration-300 ${
@@ -382,7 +387,7 @@ const Packege = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 px-4">
           {activeTab === "umrah"
             ? umrahPackages.map((pkg, index) => (
                 <PackageCard key={index} pkg={pkg} />
@@ -392,13 +397,13 @@ const Packege = () => {
               ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-12 px-4">
           <p className="text-lg mb-6  text-gray-600 dark:text-gray-300">
             কাস্টমাইজড প্যাকেজের জন্য যোগাযোগ করুন
           </p>
-          <button className="px-8 py-3 rounded-xl font-medium transition-all duration-300 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:bg-emerald-600 dark:text-white dark:hover:bg-emerald-700">
+          <a className="inline-block px-6 md:px-8 py-3 rounded-xl font-medium transition-all duration-300 border-2 border-emerald-600 text-emerald-600 hover:bg-emerald-50 dark:bg-emerald-600 dark:text-white dark:hover:bg-emerald-700">
             কাস্টম প্যাকেজের জন্য যোগাযোগ করুন →
-          </button>
+          </a>
         </div>
       </div>
     </div>

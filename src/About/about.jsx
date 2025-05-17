@@ -10,6 +10,13 @@ import {
   FaUsers,
 } from "react-icons/fa";
 import { motion } from "framer-motion";
+import aboutHero from "../assets/images/about-hero.jpeg";
+import ourMission from "../assets/images/our-mission.jpg";
+import ourVision from "../assets/images/our-vision.jpg";
+import journey1 from "../assets/images/our-journy1.jpeg";
+import journey2 from "../assets/images/our-journy2.jpeg";
+import journey3 from "../assets/images/our-journy3.jpeg";
+import journey4 from "../assets/images/our-journy4.jpeg";
 
 const About = () => {
   const teamMembers = [
@@ -39,32 +46,28 @@ const About = () => {
       year: "২০০৩",
       title: "যাত্রা শুরু",
       description: "প্রথম হজ্জ এজেন্সি হিসেবে যাত্রা শুরু",
-      image:
-        "https://images.pexels.com/photos/3163677/pexels-photo-3163677.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: journey1,
     },
     {
       year: "২০১৫",
       title: "প্রতিষ্ঠান শুরু",
       description:
         "এই বছর আমাদের যাত্রা শুরু হয়েছিল একটি ছোট টিম এবং বড় স্বপ্ন নিয়ে।",
-      image:
-        "https://images.pexels.com/photos/337904/pexels-photo-337904.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: journey2,
     },
     {
       year: "২০১৮",
       title: "প্রথম সফলতা",
       description:
         "আমাদের প্রথম পণ্য বাজারে ব্যাপক সাড়া ফেলেছিল এবং আমরা অগ্রগতির পথে চলতে থাকি।",
-      image:
-        "https://images.pexels.com/photos/2349168/pexels-photo-2349168.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: journey3,
     },
     {
       year: "২০২৩",
       title: "আন্তর্জাতিক সম্প্রসারণ",
       description:
         "আমরা বৈশ্বিক বাজারে প্রবেশ করি এবং নতুন দেশে কার্যক্রম শুরু করি।",
-      image:
-        "https://images.pexels.com/photos/2427797/pexels-photo-2427797.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
+      image: journey4,
     },
   ];
 
@@ -109,7 +112,7 @@ const About = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/30 to-emerald-800/90 mix-blend-multiply"></div>
           <img
-            src="https://images.pexels.com/photos/326716/pexels-photo-326716.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={aboutHero}
             alt="Makkah"
             className="w-full h-full object-cover"
           />
@@ -156,7 +159,7 @@ const About = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl blur-lg opacity-20"></div>
                   <img
-                    src="https://t4.ftcdn.net/jpg/00/96/54/53/360_F_96545306_cX6N4Fv2TTVRMKahA3aoCvxlUOGm2KkV.jpg"
+                  src={ourMission}
                     alt="Our Mission"
                     className="relative w-full h-[500px] object-cover rounded-2xl shadow-2xl"
                   />
@@ -204,7 +207,7 @@ const About = () => {
                 <div className="relative">
                   <div className="absolute -inset-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-2xl blur-lg opacity-20"></div>
                   <img
-                    src="https://thumbs.dreamstime.com/b/our-vision-drawn-white-brick-wall-d-inscription-modern-illustation-blue-arrow-hand-icons-around-brickwall-89018617.jpg"
+                    src={ourVision}
                     alt="Our Vision"
                     className="relative w-full h-[500px] object-cover rounded-2xl shadow-2xl"
                   />

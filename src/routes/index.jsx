@@ -11,6 +11,11 @@ import VisaProccessing from "../Services/VisaProccessing";
 import Airticketing from "../Services/Airticketing";
 import Contact from "../Contact";
 import AffilteHome from "../Affiliate/AffilteHome";
+import AffiliateLogin from "../Affiliate/AffiliateLogin";
+import AffiliateRegistration from "../Affiliate/AffiliateRegistration";
+import AffiliateDashboard from "../Affiliate/AffiliateDashboard";
+import EditProfile from "../Affiliate/EditProfile";
+import HajjGuideLine from "../GuidLine/HajjGuideLine";
 
 
 const AppRouter = () => {
@@ -29,10 +34,14 @@ const AppRouter = () => {
           <Route element={<VisaProccessing />} path="service/visa-processing" />
           <Route element={<Airticketing />} path="service/air-ticketing" />
           <Route element={<About />} path="about" />
-          <Route element={<UmrahGuideLine />} path="/umrah-guideline" />
+          <Route element={<UmrahGuideLine />} path="guide/umrah-guideline" />
+          <Route element={<HajjGuideLine />} path="guide/hajj-guideline" />
           <Route element={<Contact />} path="/contact" />
           <Route element={<AffilteHome />} path="/affiliate" />
-          
+          <Route element={<AffiliateRegistration />} path="/affiliate-registrater" />
+          <Route element={<AffiliateLogin />} path="/affiliate-login" />
+          <Route element={<AffiliateDashboard />} path="/affiliate-dashboard" />
+          <Route element={<EditProfile />} path="/affiliate-dashboard/edit-profile" />
 
         </Route>
       </Routes>

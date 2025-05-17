@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FiArrowRight, FiCheck, FiX } from "react-icons/fi";
 import { motion } from "framer-motion";
+import umrahGuideHero from "../assets/images/umrah-guide-hero.jpeg";
 import ihramImage from "../assets/images/ihram.jpg";
 import tawafImage from "../assets/images/tawaf.jpg";
 import saiImage from "../assets/images/tawaf.jpg";
@@ -137,7 +138,7 @@ const UmrahGuideLine = () => {
       <section className="relative py-20 px-4 h-[80vh]">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.pexels.com/photos/18996760/pexels-photo-18996760/free-photo-of-worshippers-around-kaaba.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+            src={umrahGuideHero}
             alt="Kaaba Background"
             className="w-full h-full object-cover"
           />
@@ -188,7 +189,7 @@ const UmrahGuideLine = () => {
               {/* Agency Info Card */}
               <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl p-8 mt-8">
                 <h3 className="text-2xl font-bold text-emerald-700 dark:text-emerald-400 mb-4">
-                  হজ আছে হজ ও ওমরাহ কাফেলা
+                  আল ইফাদা ট্রাভেলস ইন্টারন্যাশনাল লিমিটেড
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-6">
                   বাংলাদেশের সেরা ওমরাহ ও হজ অ্যাজেন্সি। আমরা ভিসা প্রসেসিং,

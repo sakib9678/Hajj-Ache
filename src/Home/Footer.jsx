@@ -19,7 +19,10 @@ import {
 import footer from "../assets/images/footer1.jpg";
 
 const Footer = () => {
-  const [darkMode, setDarkMode] = useState(false);
+  const [showPopup, setShowPopup] = useState(false);
+  const handlePopupClose = () => {
+    setShowPopup(false);
+  };
 
   return (
     <div>
@@ -43,7 +46,7 @@ const Footer = () => {
               <div className=" font-bold text-emerald-400 mb-4 flex items-center">
                 <FaKaaba className="text-4xl mr-2" />
 
-                <span className="text-2xl">হজ্ব আছে</span>
+                <span className="text-2xl">আল ইফাদা</span>
               </div>
               <p className="mb-4 text-gray-300">
                 আপনার আধ্যাত্মিকভাবে পূর্ণ হজ এবং উমরাহ অভিজ্ঞতার জন্য আপনার
@@ -86,13 +89,10 @@ const Footer = () => {
               <ul className="space-y-2">
                 {[
                   { name: "হোম", link: "/" }, 
-                  {name: "পরিষেবাসমূহ", link:"#"},
-                  {name: "রিসোর্স", link:"#"},
-                  { name: "হজ প্যাকেজ", link: "#" },
-                  { name: "উমরাহ প্যাকেজ", link: "#" },
+                  { name: "হজ প্যাকেজ", link: "hajj-packages" },
+                  { name: "উমরাহ প্যাকেজ", link: "umrah-packages" },
                   { name: "আমাদের সম্পর্কে", link: "#" },
-                  { name: "যোগাযোগ", link: "#" },
-                  { name: "অ্যাফিলিয়েট যোগদান", link: "/affiliate" },
+                  { name: "যোগাযোগ", link: "contact" },
                 ].map((item) => (
                   <li key={item}>
                     <a
@@ -113,20 +113,18 @@ const Footer = () => {
               </h4>
               <ul className="space-y-2">
                 {[
-                  "হজ গাইড",
-                  "উমরাহ গাইড",
-                  "নামাজের সময়সূচী",
-                  "ভিসা প্রয়োজনীয়তা",
-                  "স্বাস্থ্য ও নিরাপত্তা",
-                  "প্রশ্নোত্তর",
-                  "ব্লগ",
+                  { name: "হজ গাইড", link: "/guide/hajj-guideline" },
+                  { name: "উমরাহ গাইড", link: "/guide/umrah-guideline" },
+                  { name: "ভিসা প্রক্রিয়াকরণ", link: "/service/visa-processing" },
+                  { name: "এয়ার টিকেটিং", link: "/service/air-ticketing" },
+                  { name: "অ্যাফিলিয়েট যোগদান", link: "/affiliate" },
                 ].map((item) => (
-                  <li key={item}>
+                  <li key={item.name}>
                     <a
-                      href="#"
+                      href={item.link}
                       className="text-gray-300 hover:text-emerald-400 transition-colors cursor-pointer"
                     >
-                      {item}
+                      {item.name}
                     </a>
                   </li>
                 ))}
@@ -162,7 +160,7 @@ const Footer = () => {
                   আমাদের অ্যাপ ডাউনলোড করুন
                 </h4>
                 <div className="flex space-x-2">
-                  <a href="#" className="cursor-pointer">
+                  <button onClick={() => setShowPopup(true)} className="cursor-pointer">
                     <div className="flex items-center px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors">
                       <FaApple className="text-xl mr-2" />
                       <div>
@@ -170,8 +168,8 @@ const Footer = () => {
                         <div className="font-medium">App Store</div>
                       </div>
                     </div>
-                  </a>
-                  <a href="#" className="cursor-pointer">
+                  </button>
+                  <button onClick={() => setShowPopup(true)} className="cursor-pointer">
                     <div className="flex items-center px-3 py-2 rounded-lg bg-gray-800 hover:bg-gray-700 transition-colors">
                       <FaGooglePlay className="text-xl mr-2" />
                       <div>
@@ -179,7 +177,7 @@ const Footer = () => {
                         <div className="font-medium">Google Play</div>
                       </div>
                     </div>
-                  </a>
+                  </button>
                 </div>
               </div>
             </div>
@@ -190,7 +188,7 @@ const Footer = () => {
             <div className="flex flex-col md:flex-row justify-between items-center">
               <div className="mb-4 md:mb-0">
                 <p className="text-gray-300">
-                  &copy; 2025 হজ আছে. All rights reserved.
+                  &copy; 2025 আল ইফাদা ট্রাভেলস ইন্টারন্যাশনাল লিমিটেড | All rights reserved.
                 </p>
               </div>
               <div className="flex flex-wrap justify-center space-x-4">
@@ -218,6 +216,63 @@ const Footer = () => {
             </div>
           </div>
         </div>
+        {showPopup && (
+          <div
+            className="fixed inset-0 bg-black/70  flex items-center justify-center z-50"
+            onClick={handlePopupClose}
+          >
+            <div
+              className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-2xl relative max-w-md w-full mx-4 transform transition-all duration-300 scale-100"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button
+                className="absolute -top-4 -right-4 bg-emerald-500 text-white rounded-full h-8 w-8 flex items-center justify-center hover:bg-emerald-600 transition-colors duration-200 shadow-lg"
+                onClick={handlePopupClose}
+              >
+                ✕
+              </button>
+              
+              <div className="text-center">
+                <div className="mb-6">
+                  <FaKaaba className="text-6xl text-emerald-500 mx-auto mb-4" />
+                  <h2 className="text-3xl font-bold text-gray-800 dark:text-white mb-2">
+                    আল ইফাদা অ্যাপ
+                  </h2>
+                  <p className="text-emerald-500 text-lg font-semibold">
+                    খুব শীঘ্রই আসছে
+                  </p>
+                </div>
+                
+                <div className="space-y-4 mb-6">
+                  <p className="text-gray-600 dark:text-gray-300">
+                    আপনার হজ্ব ও উমরাহ যাত্রা সহজ করতে আসছে দারুণ সব ফিচার:
+                  </p>
+                  <ul className="text-left space-y-2 text-gray-600 dark:text-gray-300">
+                    <li className="flex items-center">
+                      <span className="bg-emerald-100 dark:bg-emerald-900/30 p-1 rounded-full mr-2">✓</span>
+                      লাইভ ট্র্যাকিং
+                    </li>
+                    <li className="flex items-center">
+                      <span className="bg-emerald-100 dark:bg-emerald-900/30 p-1 rounded-full mr-2">✓</span>
+                      ডিজিটাল গাইড
+                    </li>
+                    <li className="flex items-center">
+                      <span className="bg-emerald-100 dark:bg-emerald-900/30 p-1 rounded-full mr-2">✓</span>
+                      ২৪/৭ সাপোর্ট
+                    </li>
+                  </ul>
+                </div>
+
+                <button
+                  className="w-full py-3 bg-emerald-500 text-white font-medium rounded-xl shadow-md hover:bg-emerald-600 transition-colors duration-200"
+                  onClick={handlePopupClose}
+                >
+                  ঠিক আছে
+                </button>
+              </div>
+            </div>
+          </div>
+        )}
       </footer>
     </div>
   );

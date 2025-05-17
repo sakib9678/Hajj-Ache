@@ -9,6 +9,7 @@ import {
   FaFacebook,
   FaInstagram,
 } from "react-icons/fa";
+import contactHero from "./assets/images/contact-hero.jpg";
 
 const ContactInfo = [
   {
@@ -48,13 +49,13 @@ const services = [
 
 const Contact = () => {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen  bg-gray-50">
       {/* Hero Section */}
       <div className="relative">
         <div
           className="h-[80vh] bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://t4.ftcdn.net/jpg/02/63/14/87/360_F_263148731_URqK7TVJz0a1jaV3IuAdTBuXmoi4lcA6.jpg')`,
+            backgroundImage: `url(${contactHero})`,
           }}
         >
           <div className="absolute inset-0 bg-gradient-to-r from-black/80 to-emerald-900/70">

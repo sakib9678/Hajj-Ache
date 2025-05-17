@@ -1,9 +1,8 @@
 import React from "react";
+import visaManpowerHeoro from "../assets/images/visa&manpower.jpeg";
+import visaApplication from "../assets/images/visa-application.jpg";
+import visaApplication2 from "../assets/images/visa-application2.jpg";
 import {
-  FaPassport,
-  FaFileAlt,
-  FaClock,
-  FaSearchLocation,
   FaClipboardCheck,
   FaFolderOpen,
   FaPaperPlane,
@@ -42,7 +41,7 @@ const VisaProccessing = () => {
         <div className="absolute inset-0">
           <div className="absolute inset-0 bg-black/30 to-emerald-800/90 mix-blend-multiply"></div>
           <img
-            src="https://images.pexels.com/photos/2830460/pexels-photo-2830460.jpeg"
+            src={visaManpowerHeoro}
             alt="Makkah"
             className="w-full h-full object-cover object-bottom"
           />
@@ -63,7 +62,7 @@ const VisaProccessing = () => {
           {/* Image Section */}
           <div className="relative">
             <img
-              src="https://cdn.bdstall.com/product-image/giant_245023.jpg"
+              src={visaApplication}
               alt="Visa Processing"
               className="w-full h-auto rounded-xl shadow-xl"
             />
@@ -80,7 +79,7 @@ const VisaProccessing = () => {
               <span className="text-emerald-600"> বাংলাদেশ থেকে</span>
             </h2>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300">
-              হজ আছে এবং উমরাহ কাফেলায়, আমরা ভিসা আবেদন প্রক্রিয়ার গুরুত্ব
+              আল ইফাদা ট্রাভেলস ইন্টারন্যাশনাল লিমিটেডে, আমরা ভিসা আবেদন প্রক্রিয়ার গুরুত্ব
               বুঝি, যার জন্য আমরা বাংলাদেশ থেকে তীর্থযাত্রীদের জন্য সম্পূর্ণ
               প্রক্রিয়াটি সহজ করেছি। আমাদের জ্ঞানী কর্মীরা আপনাকে প্রতিটি
               পর্যায়ে পথ দেখাবে, নিশ্চিত করবে যে সমস্ত প্রয়োজনীয় নথি
@@ -177,7 +176,7 @@ const VisaProccessing = () => {
 
             <div className="relative">
               <img
-                src="https://cdn.risingbd.com/media/imgAll/2025February/Untitled-1-2502021034.jpg"
+                src={visaApplication2}
                 alt="Umrah Visa Support"
                 className="rounded-2xl shadow-xl"
               />
@@ -212,7 +211,7 @@ const VisaProccessing = () => {
                 <span className="text-emerald-600"> ধাপসমূহ</span>
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-8 text-xl">
-                হজ আছে আপনার তীর্থযাত্রার পথকে সহজ করতে
+                আল ইফাদা আপনার তীর্থযাত্রার পথকে সহজ করতে
                 প্রতিশ্রুতিবদ্ধ। নিচে উমরাহ ভিসা প্রক্রিয়ার প্রধান ধাপগুলি
                 দেওয়া হলো:
               </p>

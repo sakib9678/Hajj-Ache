@@ -1,6 +1,6 @@
 import React from "react";
 import { FaUserCheck, FaGlobe, FaHandshake, FaMedal } from "react-icons/fa";
-import Team from "../assets/images/team.jpg";
+import about from "../assets/images/home-about.jpg";
 
 const About = () => {
   const stats = [
@@ -75,7 +75,7 @@ const About = () => {
               </h2>
               <p className="text-gray-600 dark:text-gray-300 mb-6 text-xl">
                 <span className="text-2xl font-bold text-emerald-600">
-                  হজ আছে
+                  আল ইফাদা
                 </span>{" "}
                 বাংলাদেশ সরকার অনুমোদিত ট্রাভেল এজেন্ট । সরকারী নিয়মনীতি অনুযায়ী
                 প্রতি বছর শত শত আগ্রহী ব্যক্তিবর্গ আমাদের এজেন্সীর মাধ্যমে হজ্জ
@@ -123,7 +123,7 @@ const About = () => {
             </div>
             <div className="relative">
               <img
-                src="https://media.istockphoto.com/id/1433126431/photo/silhouette-of-climbers-who-climbed-to-the-top-of-the-mountain-thanks-to-mutual-assistance-and.jpg?s=612x612&w=0&k=20&c=qYdKGrhdKAPQiCEfWdTau8lSFSDW8Zy3hWklA6-78Qg="
+                src={about}
                 alt="Our Team"
                 className="rounded-2xl shadow-xl"
               />

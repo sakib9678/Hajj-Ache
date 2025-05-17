@@ -1,5 +1,12 @@
 import React from "react";
 import { FaPlane, FaTicketAlt, FaMoneyBillWave, FaClock } from "react-icons/fa";
+import airtTicketingHero from "../assets/images/air-ticketing-hero.avif";
+import airtTicket from "../assets/images/air-ticket.png";
+import bimanBangladesh from "../assets/images/biman-bangladesh.png";
+import emirates from "../assets/images/emirates.jpg";
+import qatarAirways from "../assets/images/qatar-airlines.jpg";
+import saudiArabian from "../assets/images/saudi-airlines.jpg";
+
 
 const Airticketing = () => {
   const features = [
@@ -31,7 +38,7 @@ const Airticketing = () => {
       {/* Hero Section */}
       <div className="relative h-[60vh] bg-black">
         <img
-          src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1748&q=80"
+          src={airtTicketingHero}
           alt="Air Ticketing"
           className="w-full h-full object-cover opacity-50"
         />
@@ -112,7 +119,7 @@ const Airticketing = () => {
             </div>
             <div className="relative">
               <img
-                src="https://www.botomul.com/storage/files/bd/6/thumb-816x460-2d2294c943e212b69f0ff369cafa4810.png"
+                src={airtTicket}
                 alt="Booking Service"
                 className="rounded-xl shadow-lg"
               />
@@ -193,10 +200,10 @@ const Airticketing = () => {
             <p className="text-gray-600 dark:text-gray-300">বিশ্বের সেরা এয়ারলাইন্সের সাথে আমাদের পার্টনারশিপ</p>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <img src="https://d1kaer0po85hkk.cloudfront.net/assets/biman-bangladesh-airlines.png" alt="Biman" className="h-36 object-contain mx-auto" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Emirates_Airbus_A380-861_A6-EER_MUC_2015_04.jpg" alt="Emirates" className="h-36 object-contain mx-auto" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/c/ca/A7-AEI_Airbus_A330-302_Qatar_Airways.jpg" alt="Qatar Airways" className="h-36 object-contain mx-auto" />
-            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Saudi_Arabian_Airlines_HZ-AK26_Boeing_777-368ER.jpg/640px-Saudi_Arabian_Airlines_HZ-AK26_Boeing_777-368ER.jpg" alt="Saudia" className="h-36 object-contain mx-auto" />
+            <img src={bimanBangladesh} alt="Biman" className="h-36 object-contain mx-auto" />
+            <img src={emirates} alt="Emirates" className="h-36 object-contain mx-auto" />
+            <img src={qatarAirways} alt="Qatar Airways" className="h-36 object-contain mx-auto" />
+            <img src={saudiArabian} alt="Saudia" className="h-36 object-contain mx-auto" />
           </div>
         </div>
       </div>
